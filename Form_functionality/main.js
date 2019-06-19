@@ -44,7 +44,7 @@ function verifyPhone(e) {
     // Get the name value
     const phoneNumber = e.target.value;
 
-    const re = /^(?:\d+-)?(?:\d{3}-){2}\d{4}$/ig;
+    const re = /^(?:(?:\d+[-\. ])?(?:(\d{3}[-\. ]){2}|\(\d{3}\)[-\. ](\d{3}[-\. ]))\d{4}|\d{10})$/ig;
     if (!re.test(phoneNumber)) {
         e.target.classList.add('is-invalid');
     } else {
